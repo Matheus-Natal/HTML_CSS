@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML</title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente 
+    aumente e diminua o tamanho do seu navegador
+    </p>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/1x/foto_P.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/1x/foto_M.png" type="image/png">
+        <img src="imagens/1x/foto_g.png" alt="Imagem-flexivel">
+    </picture>
+
+    <h1>Reproduzindo audio em HTML</h1>
+    
+    <!-- forma simples de incluir audio
+
+    
+    <audio src="Las Vegas Part 2 MS.mp3" controls autoplay></audio>
+      -->
+
+
+      <!--Forma abaixo com varias fontes ( alguns navegadores tem difuculdade com alguns tipos de audio). Ele tenta executar de cima para baixo-->
+     
+    <audio preload="metadata" autoplay controls loop>
+
+         <source src="Las Vegas Part 2 MS.mp3" type="audio/mpeg">
+         <source src="Las Vegas Part 2 MS.ogg" type="audio/ogg">
+         <source src="Las Vegas Part 2 MS.wav" type="audio/wav">
+        
+         <p>Infelizmente seu navegador não consegui reproduzir audio. <a href="Las Vegas Part 2 MS.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+
+    </audio>
+    
+    </body>
+</html>
